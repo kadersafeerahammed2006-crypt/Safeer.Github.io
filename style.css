@@ -452,6 +452,7 @@ section { padding: 100px 2rem; }
   border: 1px solid rgba(22,163,74,0.3);
   border-radius: 20px; padding: 3rem; position: relative; overflow: hidden;
   margin-top: 3rem;
+  display: flex; flex-direction: column; gap: 0;
 }
 
 .nm-card::before {
@@ -485,6 +486,35 @@ section { padding: 100px 2rem; }
 .nm-stat-icon { font-size: 1.5rem; }
 .nm-stat-info strong { display: block; font-size: 1rem; font-weight: 700; }
 .nm-stat-info span { font-size: 0.8rem; color: var(--text-muted); }
+
+.nm-cert-preview {
+  margin-top: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.nm-cert-img {
+  width: 100%; max-width: 420px;
+  border-radius: 12px;
+  border: 2px solid rgba(22,163,74,0.35);
+  box-shadow: 0 8px 30px rgba(22,163,74,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.nm-cert-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(22,163,74,0.35);
+}
+.btn-nm-cert {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gradient);
+  color: #fff; font-size: 0.85rem; font-weight: 700;
+  padding: 9px 22px; border-radius: 100px; text-decoration: none;
+  box-shadow: 0 4px 18px rgba(22,163,74,0.35);
+  transition: all 0.3s; width: fit-content;
+}
+.btn-nm-cert:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(22,163,74,0.5);
+}
 
 /* INTERNSHIP */
 #internship { background: var(--dark-2); }
@@ -652,6 +682,32 @@ section { padding: 100px 2rem; }
   background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3);
   color: #f59e0b; font-size: 0.72rem; font-weight: 700;
   padding: 3px 10px; border-radius: 100px;
+}
+
+.cert-download-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.35);
+  color: #a855f7; font-size: 0.74rem; font-weight: 700;
+  padding: 5px 14px; border-radius: 100px; text-decoration: none;
+  transition: all 0.25s; margin-top: 0.25rem;
+}
+.cert-download-link:hover {
+  background: rgba(168,85,247,0.3); border-color: #a855f7;
+  transform: translateY(-2px);
+}
+
+.int-cert-download { margin-left: auto; }
+.btn-cert-download {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  color: #fff; font-size: 0.82rem; font-weight: 700;
+  padding: 8px 20px; border-radius: 100px; text-decoration: none;
+  box-shadow: 0 4px 18px rgba(168,85,247,0.35);
+  transition: all 0.3s;
+}
+.btn-cert-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(168,85,247,0.5);
 }
 
 /* RESUME */
